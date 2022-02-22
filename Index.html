@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Distances btn two cities App</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="App.css" rel="stylesheet" />
+</head>
+<body>
+  
+
+    <div class="jumbotron">
+        <h1>Find the best route for your health</h1>
+        <div class="container-fluid">
+            <div id="googleMap">
+            </div>
+
+        </div>
+
+        <div class="container-fluid">
+            <form class="form-horizontal">
+                <p>
+
+                </p>
+                <div class="form-group">
+                    <label for="from" class="col-xs-4 control-label"><i class="far fa-dot-circle"></i></label>
+                    <div class="col-xs-4">
+                        <input type="text" id="from" placeholder="Origin" class="form-control">
+                    </div>
+               </div>
+               <div class="form-group">
+                
+                    <label for="to" class="col-xs-4 control-label"><i class="fas fa-map-marker-alt"></i></label>
+                    <div class="col-xs-4">
+                        <input type="text" id="to" placeholder="Destination" class="form-control">
+                    </div>
+                  
+                 </div>
+                
+                 <div class="form-group">
+                
+                    <label for="to" class="col-xs-4 control-label"><i class="fas fa-gas-pump"></i></label>
+                    <div class="col-xs-4">
+                        <input type="text" id="consum" placeholder="Fuel efficiency(L/100 Km)" class="form-control">
+                    </div>
+                  
+                 </div>
+
+                 <div class="form-group">
+                
+                    <label for="to" class="col-xs-4 control-label"></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Gas
+                        </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                        Diesel
+                        </label>
+                      </div>
+                  
+                 </div>
+                 
+            </form>
+
+            <div class="col-xs-offset-4 col-xs-10">
+                <button class="button" onclick="calcRoute();">Find my route</button>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <!-- Aici sunt div-urile pentru fiecare mod de transport -->
+            <div class="col-xs-4 control-label"></div>
+                <div class="col-xs-4">
+                <div id="outputDriving">
+                </div>
+                <!-- <div id="outputDriving"><button class="button" onclick="RouteDriving();">Car Route</button> -->
+                <div id="outputWalking">
+                </div>
+                <div id="outputBycycling">
+                </div>
+                <div id="outputElectricScooter">
+                </div>
+                <div id="outputTransit">
+                </div>
+                <div id="outputStatistic">
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Colors</th>
+                        <th scope="col" class="text-success">Very Good</th>
+                        <th scope="col" class="text-success">Moderate</th>
+                        <th scope="col" class="text-warning">Unhealthy for sensitive groups</th>
+                        <th scope="col" class="text-warning">Unhealthy</th>
+                        <th scope="col" class="text-danger">Very Unhealthy</th>
+                        <th scope="col" class="text-danger">Hazardous</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Air Quality Index</th>
+                        <td>0-50</td>
+                        <td>50-100</td>
+                        <td>100-150</td>
+                        <td>150-200</td>
+                        <td>200-300</td>
+                        <td>300-500</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tree Pollen Level</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Grass Polen Level</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Mold Level</th>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyUiVnQMm23-Rbgdz535EETaQ2oh2cSaQ&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Main.js"></script>
+</body>
+</html>

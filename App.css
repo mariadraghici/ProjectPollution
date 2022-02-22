@@ -1,0 +1,118 @@
+﻿/*styling.css*/
+/*add font family, background image*/
+
+body {
+  color: #5EBF6C;
+  font-family: "Open Sans", sans-serif;
+  margin:0%;
+  padding:0%;
+  overflow-x:hidden;
+}
+
+.fa-map-marker-alt,
+.fa-dot-circle {
+  color: #5EBF6C;
+}
+
+/*Jumbotron*/
+.jumbotron {
+  background-color: transparent;
+  margin: 0;
+  padding: 10px;
+}
+
+.jumbotron h1 {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.jumbotron h1,
+.jumbotron p {
+  text-align: center;
+}
+
+/*map*/
+#googleMap {
+  width: 110%;
+  height: 600px;
+  margin: 0;
+  margin-top: 60px;
+}
+
+/*output box*/
+#outputDriving {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#outputWalking {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#outputBycycling {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#outputTransit {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#outputElectricScooter {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#outputStatistic {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#mode {
+  color: black;
+}
+
+/* Culorile textului si background-ului */
+.alert-info {
+  color: #025928;
+  background: #CFF2C9;
+  width: 625px;
+  height: 302px;
+  border-radius: 20px;
+  background: #CFF2C9;
+}
+
+.alert-info2 {
+  color: #025928;
+  background: #CFF2C9;
+  width: 700px;
+  height: 700px;
+  border-radius: 20px;
+  background: #CFF2C9;
+}
+
+.button {
+  background-color: #5EBF6C;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.table{
+  color:black;
+}
